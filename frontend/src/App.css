@@ -1,0 +1,98 @@
+/* Background */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #000000);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  width: 400px;
+  max-width: 90%;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  outline: none;
+  background: #1e1e1e;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-box button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #16a34a;
+}
+
+/* Subtitles */
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #a3a3a3;
+}
+
+/* Example URLs */
+.examples {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.example-btn {
+  background: #1e1e1e;
+  color: #e5e5e5;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.example-btn:hover {
+  background: #2c2c2c;
+  box-shadow: 0 0 8px #22c55e;
+  color: #22c55e;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #737373;
+}
