@@ -3,8 +3,12 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import uvicorn
 from core.logic import generate_presentation
+from backend.onpage import router as onpage_router
+
 
 app = FastAPI()
+app.include_router(onpage_router)
+
 
 class InputText(BaseModel):
     text: str
