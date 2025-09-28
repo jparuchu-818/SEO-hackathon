@@ -1,8 +1,10 @@
-fastapi
-uvicorn
+uvicorn[standard]
 python-pptx
 pydantic
 requests
+jinja2
+python-multipart
 beautifulsoup4
 lxml
 playwright
+python-multipart

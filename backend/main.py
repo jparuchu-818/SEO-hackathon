@@ -3,13 +3,17 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import uvicorn
 
-from core.logic import generate_presentation
+# Person A
 from backend.onpage import router as onpage_router
-from crawlability_checker import crawlability_audit
+# Person C
+from backend.crawlability_checker import crawlability_audit
+# Person B
+from backend.analyzer import analyze
+# PPT generation
+from core.logic import generate_presentation
 
 app = FastAPI()
 app.include_router(onpage_router)
-
 
 class InputText(BaseModel):
     text: str
@@ -27,10 +31,15 @@ def generate_presentation_api(input: InputText):
 def root():
     return {"message": "SEO Hackathon Backend is running"}
 
+# Person C
 @app.get("/crawl")
 def crawl(url: str):
     return crawlability_audit(url)
 
+# Person B
+@app.get("/performance")
+def performance(url: str, refresh: bool = False):
+    return analyze(url, refresh)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
