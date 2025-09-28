@@ -1,0 +1,63 @@
+{
+  "performance": {
+    "mobile": {
+      "performance": 84,
+      "seo": 100,
+      "accessibility": 93,
+      "best_practices": 96
+    },
+    "desktop": {
+      "performance": 98,
+      "seo": 100,
+      "accessibility": 93,
+      "best_practices": 96
+    }
+  },
+  "links": {
+    "internal": 6,
+    "external": 5
+  },
+  "keywords": [
+    {
+      "term": "atya",
+      "count": 8
+    },
+    {
+      "term": "get",
+      "count": 8
+    },
+    {
+      "term": "agents",
+      "count": 8
+    },
+    {
+      "term": "your",
+      "count": 8
+    },
+    {
+      "term": "labs",
+      "count": 7
+    },
+    {
+      "term": "voice",
+      "count": 7
+    },
+    {
+      "term": "day",
+      "count": 7
+    },
+    {
+      "term": "calls",
+      "count": 6
+    },
+    {
+      "term": "lead",
+      "count": 5
+    },
+    {
+      "term": "solutions",
+      "count": 5
+    }
+  ],
+  "word_count": 649
+}

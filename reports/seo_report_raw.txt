@@ -1,0 +1,12 @@
+Here are the slides:
+
+## Slide 1: Introduction
+* The analyzed website is apple.com.
+* Word count: 6244.
+* Internal links: 334.
+* External links: 2.
+* Keyword analysis:
+	+ Top terms: "iphone" (143), "plan" (137), "apple" (127), etc.
+
+Key Takeaway: Apple's website has a significant word count and internal link count, indicating a comprehensive online presence.
+
