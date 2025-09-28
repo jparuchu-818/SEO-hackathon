@@ -2,35 +2,49 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import uvicorn
-from core.logic import generate_presentation
-
 
 # Person A
 from backend.onpage import router as onpage_router
+
 # Person C
-from crawlability_checker import crawlability_audit
+from backend.crawlability_checker import crawlability_audit
+
 # Person B
-from backend.performance import performance_audit  
+from backend.analyzer import analyze
+
 
 app = FastAPI()
 app.include_router(onpage_router)
 
+
 class InputText(BaseModel):
     text: str
+
+
+@app.post("/generate")
+def generate_presentation_api(input: InputText):
+    # stub: just returns ppt if you add later
+    return FileResponse("output.pptx",
+        media_type="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        filename="output.pptx")
+
 
 @app.get("/")
 def root():
     return {"message": "SEO Hackathon Backend is running"}
 
+
+# Person C
 @app.get("/crawl")
 def crawl(url: str):
     return crawlability_audit(url)
 
-@app.get("/performance")
-def performance(url: str):
-    return performance_audit(url)
 
-@app.post("/generate")
-def generate_presentation_api(input: InputText):
-    filename = generate_presentation(input.text)
-    return FileResponse(filename, media_type="application/vnd.openxmlformats-officedocument.presentationml.presentation", filename="output.pptx")
+# Person B
+@app.get("/performance")
+def performance(url: str, refresh: bool = False):
+    return analyze(url, refresh)
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
