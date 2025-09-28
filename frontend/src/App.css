@@ -9,6 +9,7 @@
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  padding: 2rem;
 }
 
 /* Title */
@@ -95,4 +96,78 @@
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #737373;
+}
+
+/* Result Card */
+.result-card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
+  text-align: center;
+}
+
+.result-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #22c55e, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.result-url {
+  font-size: 1rem;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+  word-break: break-all;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-btn {
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+}
+
+.open-btn:hover {
+  background: #16a34a;
+}
+
+.copy-btn {
+  background: #1e1e1e;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.copy-btn:hover {
+  background: #22c55e;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
