@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from crawlability_checker import crawlability_audit
+from backend.crawlability_checker import crawlability_audit
 from backend.onpage import router as onpage_router
+
 
 app = FastAPI()
 
